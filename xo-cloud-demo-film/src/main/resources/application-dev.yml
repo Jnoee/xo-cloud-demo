@@ -1,0 +1,36 @@
+spring:
+  boot:
+    admin:
+      client:
+        instance:
+          prefer-ip: true
+        url: http://10.9.4.155:49020
+  h2:
+    console:
+      enabled: true
+  datasource:
+    druid:
+      url: jdbc:h2:mem:film;DB_CLOSE_DELAY=-1
+      username: sa
+      password: null
+      initial-size: 5
+      min-idle: 0
+      max-active: 20
+  jpa:
+    database: h2
+    show-sql: true
+    properties:
+      hibernate:
+        search:
+          default:
+            elasticsearch:
+              host: http://10.9.4.93:9200
+logging:
+  level:
+    com:
+      github:
+        jnoee: DEBUG
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://10.9.4.155:49000/eureka/

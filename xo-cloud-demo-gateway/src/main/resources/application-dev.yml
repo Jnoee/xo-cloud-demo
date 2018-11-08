@@ -1,0 +1,11 @@
+spring:
+  boot:
+    admin:
+      client:
+        instance:
+          prefer-ip: true
+        url: http://localhost:49020
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:49000/eureka/

@@ -1,0 +1,9 @@
+.settings
+.project
+.classpath
+.checkstyle
+.springBeans
+target
+*.md.html
+pom.xml.releaseBackup
+release.properties

@@ -1,0 +1,36 @@
+server:
+  port: 8000
+spring:
+  profiles:
+    active: dev
+  application:
+    name: gateway-server
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+      - id: login
+        uri: lb://ADMIN-SERVER
+        predicates:
+        - Path=/login
+      - id: logout
+        uri: lb://ADMIN-SERVER
+        predicates:
+        - Path=/logout
+logging:
+  level:
+    root: WARN
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS
