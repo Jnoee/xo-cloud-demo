@@ -26,9 +26,8 @@ spring:
 logging:
   level:
     root: WARN
-su:
+xo:
   cache:
-    redisson:
       config-file: redisson-${spring.profiles.active}.yml
   api:
     doc:
