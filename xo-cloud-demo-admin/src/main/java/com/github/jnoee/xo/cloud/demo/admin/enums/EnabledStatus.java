@@ -2,7 +2,7 @@ package com.github.jnoee.xo.cloud.demo.admin.enums;
 
 
 import com.github.jnoee.xo.constant.Color;
-import com.github.jnoee.xo.model.IEnum;
+import com.github.jnoee.xo.ienum.IEnum;
 
 import lombok.Getter;
 

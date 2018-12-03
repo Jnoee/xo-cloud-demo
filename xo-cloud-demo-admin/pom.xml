@@ -20,6 +20,11 @@
 			<artifactId>xo-starter-jpa-audit</artifactId>
 			<version>${xo-starter.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>com.github.jnoee</groupId>
+			<artifactId>xo-starter-ienum</artifactId>
+			<version>${xo-starter.version}</version>
+		</dependency>
 	</dependencies>
 	
 	<build>
