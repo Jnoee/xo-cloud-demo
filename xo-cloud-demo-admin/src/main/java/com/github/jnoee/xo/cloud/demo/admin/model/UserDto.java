@@ -20,10 +20,10 @@ public class UserDto {
   private String name;
   @NotBlank(message = "机构ID不能为空")
   @ApiModelProperty(value = "机构ID", required = true)
-  private String organId;
+  private Long organId;
   @NotBlank(message = "角色ID不能为空")
   @ApiModelProperty(value = "角色ID", required = true)
-  private String roleId;
+  private Long roleId;
   @NotBlank(message = "职务名称不能为空")
   @ApiModelProperty(value = "职务名称", required = true)
   private String actorName;

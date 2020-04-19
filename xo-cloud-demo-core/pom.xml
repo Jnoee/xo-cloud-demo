@@ -10,12 +10,12 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.github.jnoee</groupId>
-			<artifactId>xo-starter-cache</artifactId>
+			<artifactId>xo-starter-cache-redisson</artifactId>
 			<version>${xo-starter.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.github.jnoee</groupId>
-			<artifactId>xo-starter-auth</artifactId>
+			<artifactId>xo-starter-auth-core</artifactId>
 			<version>${xo-starter.version}</version>
 		</dependency>
 		<dependency>

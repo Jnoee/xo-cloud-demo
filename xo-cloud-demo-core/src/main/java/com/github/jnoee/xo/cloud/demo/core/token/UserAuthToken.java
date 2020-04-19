@@ -9,5 +9,5 @@ import lombok.Setter;
 @Setter
 public class UserAuthToken extends AuthToken {
   private static final long serialVersionUID = -7248460073711978127L;
-  private String id;
+  private Long id;
 }

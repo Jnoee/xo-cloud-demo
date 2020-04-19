@@ -24,7 +24,7 @@ public class OrganService {
   private MessageSource messageSource;
 
   @Transactional(readOnly = true)
-  public Organ get(String id) {
+  public Organ get(Long id) {
     Organ organ = organDao.get(id);
     if (null == organ) {
       messageSource.thrown("e.organ.get.not-exist", id);
@@ -45,7 +45,7 @@ public class OrganService {
   @DetailLog(target = "organ", code = "l.organ.edit", vars = "organ.name", type = LogType.ALL)
   public void update(Organ organ) {
     Organ origOrgan = get(organ.getId());
-    BeanUtils.copyFields(organ, origOrgan, "ordinal", "enabled");
+    BeanUtils.copyFieldsExclude(organ, origOrgan, "ordinal,enabled");
   }
 
   @Transactional

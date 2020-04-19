@@ -66,7 +66,7 @@ public class UserService implements AuthUserService<User> {
     return get(token.getId());
   }
 
-  public User get(String id) {
+  public User get(Long id) {
     return userDao.get(id);
   }
 

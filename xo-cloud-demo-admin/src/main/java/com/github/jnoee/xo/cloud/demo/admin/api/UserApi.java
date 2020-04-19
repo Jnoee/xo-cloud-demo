@@ -1,7 +1,7 @@
 package com.github.jnoee.xo.cloud.demo.admin.api;
 
 import javax.validation.Valid;
-import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,7 +32,7 @@ public class UserApi {
   @ApiOperation("获取用户信息")
   @ApiImplicitParam(name = "id", value = "用户ID", required = true)
   @RequiresPermissions("user:manage")
-  public UserVo get(@PathVariable @NotBlank String id) {
+  public UserVo get(@PathVariable @NotNull Long id) {
     User user = userService.get(id);
     return UserVo.forGet(user);
   }

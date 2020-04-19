@@ -1,6 +1,6 @@
 package com.github.jnoee.xo.cloud.demo.admin.api;
 
-import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +29,7 @@ public class OrganApi {
   @ApiOperation("获取机构信息")
   @ApiImplicitParam(name = "id", value = "机构ID", required = true)
   @RequiresPermissions("organ:manage")
-  public OrganVo get(@PathVariable @NotBlank String id) {
+  public OrganVo get(@PathVariable @NotNull Long id) {
     Organ organ = organService.get(id);
     return new OrganVo(organ);
   }
